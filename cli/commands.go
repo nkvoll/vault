@@ -35,6 +35,7 @@ import (
 	"github.com/hashicorp/vault/logical"
 	"github.com/hashicorp/vault/meta"
 	"github.com/mitchellh/cli"
+	"github.com/hashicorp/vault/builtin/logical/elasticsearch"
 )
 
 // Commands returns the mapping of CLI commands for Vault. The meta
@@ -87,6 +88,7 @@ func Commands(metaPtr *meta.Meta) map[string]cli.CommandFactory {
 					"pki":        pki.Factory,
 					"transit":    transit.Factory,
 					"mongodb":    mongodb.Factory,
+					"elasticsearch":    elasticsearch.Factory,
 					"mssql":      mssql.Factory,
 					"mysql":      mysql.Factory,
 					"ssh":        ssh.Factory,
